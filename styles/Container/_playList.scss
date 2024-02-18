@@ -1,0 +1,54 @@
+.playList{
+    height: 100vh;
+    padding-bottom: 5rem;
+    overflow-y: scroll;
+    &__content{
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 10rem;
+      margin-left: 4rem; 
+      margin-right: 4rem;
+      &__header{  
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        &__inputSection{
+          width: 30%;
+          input{
+            padding: 1.5rem;
+            background-color: transparent;
+            border-radius: 0.5rem;
+            border: 0.1rem solid #666464;
+            outline: none;
+            width: 100%;
+            color: #fff;
+            font-size: 1.25rem;
+            opacity: 0.8;
+          }
+        }
+        h3{
+          color: #fff;
+          font-size: 1.8rem;
+          font-weight: 600;
+          opacity: 0.6;
+          text-transform: uppercase;
+          letter-spacing: 0.4rem;
+          width: 70%;
+        }
+      }
+      &__data{
+       margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 4rem;
+        justify-content: space-between;
+        @include respond(phone-med)
+        {
+          flex-direction: column;
+        }
+
+     }
+    }
+}

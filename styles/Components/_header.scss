@@ -1,0 +1,17 @@
+.navbar{
+  display: flex;
+  background: #2d3035;
+  position: sticky;
+  justify-content: space-between;
+  top: 0;
+  z-index: 120;
+  box-shadow: 0 .8rem .8rem 0 rgba(0, 0, 0, 0.1);
+  padding: 2rem 4rem;
+    position: fixed;
+    width: 100%;
+  h3{
+    color: #fff;
+    font-size: 2rem;
+  }
+
+}

@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import "./mediaQueryManger";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+html {
+  font-size: 58%; //1rem = 10px; 10px/16px% = 62.5
+
+  @include respond(big-desk) {
+    //width > 1200px ?
+    font-size: 65%; // 1rem = 12px; 9/16% = 75%
+  }
+
+  @include respond(tab-land) {
+    //width < 1200px ?
+    font-size: 50.25%; // 1rem = 9px; 9/16% = 56.25%
+  }
+
+  @include respond(tab-pot) {
+    //width < 992px ?
+    font-size: 48%; // 1rem = 8px; 8/16% = 50%
+  }
+
+  @include respond(phone-med) {
+    //width < 768px ?
+    font-size: 47.5%; // 1rem = 7px; 7/16% = 43.75%
+  }
+  @include respond(phone) {
+    //width < 600px ?
+    font-size: 47.5%; // 1rem = 7px; 7/16% = 43.75%
+  }
+
+  @include respond(small-phone) {
+    //width < 375px ?
+    font-size: 42%; // 1rem = 7px; 7/16% = 43.75%
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  background-color: #121212;
+  width: 100vw;
+  overflow: hidden;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  --w3m-z-index: 10000!important;
+}
+
+::-webkit-scrollbar {
+  width: 0.1rem; /* Width of the scrollbar */
+  height: 0.1rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Thumb color */
+  border-radius: 1rem; /* Round corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Thumb color on hover */
+}
